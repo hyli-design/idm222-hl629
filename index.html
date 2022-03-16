@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+          <meta charset="utf-8"/>
+        <title>HYLi Design</title>
+        <style>
+/* Top logo section */
+a:hover, .work-name:hover {
+  color: #00d2a9;
+}
+.container-top{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    margin-right: 76px;
+    margin-left: 76px;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing:10px;
+    color: #551A8B;
+}
+.container{
+margin-top: 400px;
+}
+.logo{
+    color: #551A8B;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+/* Top logo section */
+
+/* Self introduction typewriter*/
+h1 {
+  margin-bottom: 500px;
+  background-image: linear-gradient(90deg,#652ff9 7%, #0073f9 34%,#00b1e2 56%,#03cda1 75%, #00d2a9);
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 80px;
+}
+.text-1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 812px;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: .5px;
+    color: #333;
+}
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Self introduction typewriter*/
+
+/* Project Section*/
+.product-cover-section{
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 812px;
+}
+.work-name{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    line-height: 25px;
+    color: #333;
+}
+.work-description{
+    margin-bottom: 80px;
+    font-size: .88rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: 200;
+    line-height: 50px;
+    color: #333;
+}
+.responsive-img{
+    width: 100%;
+  height: auto;
+}
+/* Project Section*/
+
+/* Footer */
+.footer-line {
+    width: 100px;
+    margin-top: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 5px solid #a1a1a1;}
+
+.footer-text {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-family: 'Open Sans',sans-serif;
+    color: #a1a1a1;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}
+/* Footer */
+        </style>
+    </head>
+    <body>
+<!--Top logo section -->
+        <div class="container-top">
+            <a href="index.html" style=text-decoration:none; class="logo">HYL</a>
+        </div>
+<!--Top logo section -->
+
+<!--Self Introduction  -->
+        <div class="container">
+            <div class="text-block-1">
+                <div class="text-1"> Hi I'm <strong class="important-text>"> Haoyu Li.</strong> </div>
+            </div>
+
+        <h1>A Product Designer.</h1>
+<!--Self Introduction  -->
+
+<!--Project Section-->
+        <div class="product-cover-section">
+            <a href="domastic.html" style=text-decoration:none; class="link-block">
+                <div class="cover-container">
+                    <img src="images/Project/domesticated-domesticator/show.png" alt="domesticated-show-covercontainer" class="responsive-img">
+                    <div class="work-name">Domesticated Domesticator</div>
+                    <div class="work-description">AI Design, Storytelling, Speculative</div>
+                </div>
+            </a>
+            <a href="little-ai-qiqiaodream.html" style=text-decoration:none; class="link-block">
+                <div class="cover-container">
+                    <img src="images/Project/qiqiao-dream/main.png" alt="qiqiao-dream" class="responsive-img">
+                    <div class="work-name">AI Partner QiQi Dream</div>
+                    <div class="work-description">Curation, Interactive Exhibition, AI</div>
+                </div>
+            </a>
+        </div>
+<!--Project Section-->
+
+<!--Footer-->
+        </div>
+        <footer class="footer-more-info">
+          <div class="footer-line"></div>
+          <div class="footer-text">Designed and Coded by Haoyu Li, All Rights Reserved.</div>
+      </footer>
+<!--Footer-->
+
+<!-- Typewriter-self introduction -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(event){
+  // array with texts to type in typewriter
+  var dataText = [ "A Product Designer.", "A Storyteller.", "A System Thinker."];
+  
+  // type one text in the typwriter
+  // keeps calling itself until the text is finished
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      // add next character to h1
+     document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+   function StartTextAnimation(i) {
+     if (typeof dataText[i] == 'undefined'){
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 700);
+     }
+     // check if dataText[i] exists
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+     typeWriter(dataText[i], 0, function(){
+       // after callback (and whole text has been animated), start next text
+       StartTextAnimation(i + 1);
+     });
+    }
+  }
+  // start the text animation
+  StartTextAnimation(0);
+});
+</script>
+<!-- Typewriter-self introduction -->
+
+    </body>
+</html>
