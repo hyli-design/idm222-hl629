@@ -3,162 +3,68 @@
         <head>
           <meta charset="utf-8"/>
         <title>HYLi Design</title>
-        <style>
-/* Top logo section */
-a:hover, .work-name:hover {
-  color: #00d2a9;
-}
-.container-top{
-    padding-top: 50px;
-    padding-bottom: 10px;
-    margin-bottom: 50px;
-    margin-right: 76px;
-    margin-left: 76px;
-    font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing:10px;
-    color: #551A8B;
-}
-.container{
-margin-top: 400px;
-}
-.logo{
-    color: #551A8B;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-}
-
-/* Top logo section */
-
-/* Self introduction typewriter*/
-h1 {
-  margin-bottom: 500px;
-  background-image: linear-gradient(90deg,#652ff9 7%, #0073f9 34%,#00b1e2 56%,#03cda1 75%, #00d2a9);
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  font-size: 80px;
-}
-.text-1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 812px;
-    font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif ;
-    line-height: 100px;
-    text-align: center;
-    letter-spacing: .5px;
-    color: #333;
-}
-span {
-  border-right: .05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-/* Self introduction typewriter*/
-
-/* Project Section*/
-.product-cover-section{
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 812px;
-}
-.work-name{
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    line-height: 25px;
-    color: #333;
-}
-.work-description{
-    margin-bottom: 80px;
-    font-size: .88rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: oblique;
-    font-weight: 200;
-    line-height: 50px;
-    color: #333;
-}
-.responsive-img{
-    width: 100%;
-  height: auto;
-}
-/* Project Section*/
-
-/* Footer */
-.footer-line {
-    width: 100px;
-    margin-top: 350px;
-    margin-right: auto;
-    margin-left: auto;
-    border-top: 5px solid #a1a1a1;}
-
-.footer-text {
-    margin-top: 15px;
-    margin-bottom: 50px;
-    font-family: 'Open Sans',sans-serif;
-    color: #a1a1a1;
-    font-size: 13px;
-    font-weight: 400;
-    text-align: center;
-}
-/* Footer */
-        </style>
+        <link rel="stylesheet" href="index.css">
     </head>
-    <body>
-<!--Top logo section -->
-        <div class="container-top">
-            <a href="index.html" style=text-decoration:none; class="logo">HYL</a>
-        </div>
-<!--Top logo section -->
+    <header>
+        <h2 class="logo">HYLi</h2>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+          <ul>
+            <li><a href="index.html">PROJECT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="Haoyu Li - Resume copy.pdf" target="_blank">CV</a></li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </header>
+<section id="sec-1">
+  <div class="container">
+    <div class="text-block-1">
+        <div class="text-1"> Hi I'm <strong class="important-text>"> Haoyu Li.</strong> </div>
+    </div>
+    <h1>A Product Designer.</h1>
+    <a href="#sec-2">
+      <div class="scroll-down"></div>
+    </a>
 
-<!--Self Introduction  -->
-        <div class="container">
-            <div class="text-block-1">
-                <div class="text-1"> Hi I'm <strong class="important-text>"> Haoyu Li.</strong> </div>
-            </div>
-
-        <h1>A Product Designer.</h1>
+</section>
 <!--Self Introduction  -->
 
 <!--Project Section-->
-        <div class="product-cover-section">
-            <a href="domastic.html" style=text-decoration:none; class="link-block">
-                <div class="cover-container">
-                    <img src="images/Project/domesticated-domesticator/show.png" alt="domesticated-show-covercontainer" class="responsive-img">
-                    <div class="work-name">Domesticated Domesticator</div>
-                    <div class="work-description">AI Design, Storytelling, Speculative</div>
-                </div>
-            </a>
-            <a href="little-ai-qiqiaodream.html" style=text-decoration:none; class="link-block">
-                <div class="cover-container">
-                    <img src="images/Project/qiqiao-dream/main.png" alt="qiqiao-dream" class="responsive-img">
-                    <div class="work-name">AI Partner QiQi Dream</div>
-                    <div class="work-description">Curation, Interactive Exhibition, AI</div>
-                </div>
-            </a>
+<section id="sec-2">
+  <div class="product-cover-section">
+    <a href="domastic.html" style=text-decoration:none; class="link-block">
+        <div class="cover-container">
+            <img src="images/Project/domesticated-domesticator/show.png" alt="domesticated-show-covercontainer" class="responsive-img">
+            <div class="work-name">Domesticated Domesticator</div>
+            <div class="work-description">AI Design, Storytelling, Speculative</div>
         </div>
+    </a>
+    <a href="little-ai-qiqiaodream.html" style=text-decoration:none; class="link-block">
+        <div class="cover-container">
+            <img src="images/Project/qiqiao-dream/main.png" alt="qiqiao-dream" class="responsive-img">
+            <div class="work-name">AI Partner QiQi Dream</div>
+            <div class="work-description">Curation, Interactive Exhibition, AI</div>
+        </div>
+    </a>
+    <a href="little-ai-qiqiaodream.html" style=text-decoration:none; class="link-block">
+      <div class="cover-container">
+          <img src="images/Project/qiqiao-dream/main.png" alt="qiqiao-dream" class="responsive-img">
+          <div class="work-name">AI Partner QiQi Dream</div>
+          <div class="work-description">Curation, Interactive Exhibition, AI</div>
+      </div>
+  </a>
+</div>
+</section>
+
 <!--Project Section-->
 
 <!--Footer-->
-        </div>
-        <footer class="footer-more-info">
-          <div class="footer-line"></div>
-          <div class="footer-text">Designed and Coded by Haoyu Li, All Rights Reserved.</div>
-      </footer>
+<div class="footer">
+  <p>Designed and Coded by Haoyu Li, All Rights Reserved.</p>
+</div>
 <!--Footer-->
 
 <!-- Typewriter-self introduction -->
@@ -206,7 +112,34 @@ span {
   StartTextAnimation(0);
 });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 150, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 <!-- Typewriter-self introduction -->
 
-    </body>
-</html>
+
+      </html>

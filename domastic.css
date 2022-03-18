@@ -1,0 +1,298 @@
+:root {
+    --background: rgb(255, 255, 255);
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+body {
+	margin: 0;
+	background: rgb(255, 255, 255);
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+/* navigation styles start here */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: rgb(51, 51, 51);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+    font-size: 2rem;
+  }
+  
+  nav {
+    // all: unset; 
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: rgb(255, 230, 0);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+  .container {
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 812px;
+  }
+  .container-top{
+      font-size: 3rem;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing:10px;    
+      margin-bottom: 50px;
+      margin-right: 76px;
+      margin-left: 76px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+  }
+
+  .responsive-img{
+      height: auto;
+      width: 100%;
+  }
+  /* Top logo section */
+  
+  /* Heading */
+  .project-heading {
+      color: #333;
+      font-size: 48px;
+      font-family: sans-serif;
+      font-weight: 600;
+      line-height: 32px;
+      margin-top: 0px;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 150px;
+      text-align: center;
+  }
+  .project-sum {
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: 200;
+      line-height: 32px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+  }
+  /* Heading */
+  
+  /* Project introduction info */
+  .project-info {
+      font-family: 'Open Sans',sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 25px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+  .info-text {
+      color: #333;
+      font-family: 'Open Sans',sans-serif;
+      line-height: 50px;
+      margin-bottom: 40px;
+  }
+  
+  /* Project introduction info */
+  
+  /* Project info details*/
+  .over-view-text, p {
+      font-family: 'Open Sans',sans-serif;
+      font-size: 16px;
+      font-weight:400;
+      line-height: 2.7rem;
+      margin-top: 20px;
+      margin-bottom: 20px; 
+  }  
+  .text-block-1{
+      font-family: 'Open Sans',sans-serif;
+      font-size: 40px;
+      font-weight: 1000;
+      line-height: 1rem;
+      margin-top: 40px;
+      margin-bottom: 40px;
+  }
+  .text-block-2{
+      font-family: 'Open Sans',sans-serif;
+      font-size: 40px;
+      font-weight: 1000;
+      line-height: 1rem;
+      margin-top: 60px;
+      margin-bottom: 35px;
+  }
+  .image-info-text{
+  margin-top: 12px;
+  margin-bottom: 50px;
+  font-family:'Open Sans',sans-serif;
+  font-size: 14px;
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: left;
+  }
+  .image-info-text-2{
+  margin-top: 12px;
+  margin-bottom: 1.5rem;
+  font-family:'Open Sans',sans-serif;
+  font-size: 14px;
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: left;
+  }
+  /* Project info details*/
+  
+  /* footer*/
+  .footer {
+    font-size: 14px;
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(255, 255, 255);
+   color: rgb(194, 194, 194);
+   text-align: center;
+ }
+  /* footer*/
