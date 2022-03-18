@@ -112,11 +112,10 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 450px) {
   .nav-toggle-label {
     display: none;
   }
-
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
@@ -128,7 +127,7 @@ nav a:hover {
   }
   
   nav {
-    // all: unset; 
+    all: unset; 
     position: relative;
     text-align: left;
     transition: none;
@@ -319,24 +318,15 @@ nav a:hover {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .footer {
-    font-size: 14px;
-   position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: rgb(255, 255, 255);
-   color: rgb(194, 194, 194);
-   text-align: center;
- }
-  @media screen and (min-width: 800px){
+
+  @media screen and (min-width: 450px){
     .product-cover-section{
       display: flex;
       flex-flow: row wrap;
             max-width: none;
             margin-left: auto;
             margin-right: auto;
-            max-width: 1000px;
+            
         }
         .link-block{
           position: relative;
@@ -375,7 +365,7 @@ nav a:hover {
         .container{
           margin: 0px;
         }
-        
+      }
   
     
   
